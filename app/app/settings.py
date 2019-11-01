@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'users',
+    'users.apps.UsesrsConfig',
+    'onlib.apps.OnlibConfig',
 ]
 
 MIDDLEWARE = [
