@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'users.apps.UsesrsConfig',
+    'users.apps.UsersConfig',
     'onlib.apps.OnlibConfig',
 ]
 
