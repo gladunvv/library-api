@@ -5,5 +5,5 @@ app_name = 'onlib'
 
 urlpatterns = [
     path('books', AllBooksView.as_view(), name='all_book'),
-    path('filter', FilterBooksView.as_view(), name='filter')
+    path('filter', FilterBooksView.as_view(), name='filter'),
 ]
