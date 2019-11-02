@@ -19,7 +19,7 @@ class Author(models.Model):
 
 
 class Genre(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Genre book')
+    title = models.CharField(max_length=255, verbose_name='Book\'s genre')
 
     class Meta:
         ordering = ('title',)
@@ -33,7 +33,7 @@ class Genre(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=255, verbose_name='Book title')
     description = models.TextField(blank=True, verbose_name='Book description')
-    page_amount = models.IntegerField(verbose_name='Book page description')
+    page_amount = models.IntegerField(verbose_name='Amount page book')
     isbn = models.CharField(max_length=255, verbose_name='Book ISBN')
     author = models.ForeignKey(Author, related_name='author', on_delete=models.CASCADE)
     genre = models.ForeignKey(Genre, related_name='genre', on_delete=models.CASCADE)
