@@ -18,4 +18,3 @@ class AdminGenre(admin.ModelAdmin):
 class AdminAuthor(admin.ModelAdmin):
 
     list_display = ('first_name', 'last_name')
-

@@ -1,9 +1,10 @@
-from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
-from rest_framework.test import APIClient
-from rest_framework import status
 from django.core import exceptions
+from django.contrib.auth import get_user_model
+
+from rest_framework import status
+from rest_framework.test import APIClient
 
 
 CREATE_USER_URL = reverse('users:create_user')

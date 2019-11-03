@@ -1,10 +1,11 @@
-from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
+
 from rest_framework.test import APIClient
 from rest_framework import status
-from django.core import exceptions
+
 from onlib.models import Book, Genre, Author
+
 
 SEARCH_BOOK_URL = reverse('onlib:search')
 
@@ -28,7 +29,7 @@ def sample_book_onlib():
     data_books = [
         {
             'title': 'Moral letters to Lucilius',
-            'description':'Long description',
+            'description': 'Long description',
             'page_amount': 242,
             'isbn': '9780486811246',
             'genre_id': 1,
@@ -61,8 +62,7 @@ class UserApiTests(TestCase):
     def setUp(self):
         self.client = APIClient()
 
-
-    def test_search_book_no_auth(self): 
+    def test_search_book_no_auth(self):
         sample_book_onlib()
         res = self.client.get(SEARCH_BOOK_URL + '?search=Siddhartha')
         self.assertEqual(res.data[0]['title'], 'Siddhartha')
@@ -84,17 +84,19 @@ class UserApiTests(TestCase):
     def test_author_models_str_method(self):
         item = Author.objects.create(
             first_name='Test',
-            last_name= 'Author')
+            last_name='Author'
+            )
         self.assertEqual(str(item), 'Test Author')
 
     def test_genre_models_str_method(self):
         item = Genre.objects.create(
-            title='Test Genre')
+            title='Test Genre'
+            )
         self.assertEqual(str(item), 'Test Genre')
 
     def test_book_models_str_method(self):
         data = {
-            'title': 'Flowers for Algernon',
+                'title': 'Flowers for Algernon',
                 'description': 'Long description',
                 'page_amount': 342,
                 'isbn': '9788467511468',

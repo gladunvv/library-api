@@ -1,12 +1,10 @@
-from django.utils.http import urlsafe_base64_decode
-from django.contrib.auth.models import User
-
 from rest_framework import status
 from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.authtoken.views import ObtainAuthToken
+
 from users.serializers import CreateUserSerializer
 
 
