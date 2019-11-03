@@ -4,6 +4,6 @@ from onlib.views import AllBooksView, FilterBooksView
 app_name = 'onlib'
 
 urlpatterns = [
-    path('books', AllBooksView.as_view(), name='all_book'),
+    path('search', AllBooksView.as_view(), name='search'),
     path('filter', FilterBooksView.as_view(), name='filter'),
 ]

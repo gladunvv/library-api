@@ -7,6 +7,7 @@ from rest_framework import generics
 
 from django_filters import rest_framework as filter_rest
 
+
 class AllBooksView(generics.ListAPIView):
 
     permission_classes = (permissions.AllowAny,)

@@ -5,8 +5,8 @@ from django.contrib.auth import get_user_model
 class Author(models.Model):
     first_name = models.CharField(max_length=255, blank=True, verbose_name='First name')
     last_name = models.CharField(max_length=255, blank=True, verbose_name='Last name')
-    date_of_birth = models.DateField(blank=True, verbose_name='Date of birth')
-    date_of_death = models.DateField(blank=True, verbose_name='Date of death')
+    date_of_birth = models.DateField(blank=True, null=True, verbose_name='Date of birth')
+    date_of_death = models.DateField(blank=True, null=True, verbose_name='Date of death')
 
     class Meta:
         ordering = ('first_name',)
@@ -15,7 +15,6 @@ class Author(models.Model):
 
     def __str__(self):
         return '%s %s' % (self.first_name, self.last_name)
-
 
 
 class Genre(models.Model):
