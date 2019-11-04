@@ -15,5 +15,5 @@ urlpatterns = [
     path('filter', FilterBooksView.as_view(), name='filter'),
     path('genres', GenreView.as_view(), name='genres'),
     path('authors', AuthorView.as_view(), name='authors'),
-    path('book', BookView.as_view(), name='books'),
+    path('books', BookView.as_view(), name='books'),
 ]
