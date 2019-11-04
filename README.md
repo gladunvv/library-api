@@ -141,7 +141,7 @@ python manage.py runserver
 }
 ```
 
-Тело отвеа:
+Тело ответа:
 ```
 {
     "id": 1,
