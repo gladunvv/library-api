@@ -52,7 +52,7 @@ Web application library, with the possibility of authorization on DRF
 + sqlparse==0.3.0
 
 ### Сборка и запуск:
-! Перед запуском необходимо локально создать и настроить базу данных(Postgresql) а также в корне проекта создать файл .env и заполнить его данными для доступа к базе, пример заполнения в [.env.example](https://github.com/gladunvv/library-api/blob/master/app/.env.example)
+* Перед запуском необходимо локально создать и настроить базу данных(Postgresql) а также в корне проекта создать файл .env и заполнить его данными для доступа к базе, пример заполнения в [.env.example](https://github.com/gladunvv/library-api/blob/master/app/.env.example)
 
 ```
 git clone git@github.com:gladunvv/library-api.git
